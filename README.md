@@ -1,5 +1,14 @@
 The goal is to find the cofiguration combination that allows to run Node.js Web app (koa.js based) with Typescript with ESM with TSX runner with AVA for testing and being able to debug both tests and the app with vscode.
 
+Dependencies:
+> node22
+> yarn
+
+Setup:
+> yarn
+
+
+
 TODO:
 check if can run tests localy
 check if controller code is debugged
