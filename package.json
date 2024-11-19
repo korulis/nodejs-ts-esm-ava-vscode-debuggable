@@ -10,6 +10,7 @@
   "scripts": {
     "start": "rm -rf dist && NODE_ENV=development tsx watch ./src/app/index.ts",
     "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js",
+    "build_and_start": "tsc && node dist/app/index.js",
     "build": "tsc"
   },
   "devDependencies": {
