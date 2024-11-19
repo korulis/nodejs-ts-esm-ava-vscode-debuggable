@@ -1,53 +1,18 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@tsconfig/node22/tsconfig.json"],
   "compilerOptions": {
-    /*BUILD*/
-    /* What TS compilation should base its structure on: https://www.typescriptlang.org/tsconfig/#rootDir */
-    "rootDir": "./src",
-    /* COMPILE */
-    /* Base Options: */
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022"],
+    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
-    "lib": ["es2022"],
-    // todo kb: trying to remove this , maybe will help with tests
-    // "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-    /* Strictness */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    /* Additional strictness */
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noFallthroughCasesInSwitch": true,
-    "strictNullChecks": true,
-    /* Less strictness: */
-    "useUnknownInCatchVariables": true,
-    // "strictPropertyInitialization": true, maybe uncomment this later
-    /* If transpiling with TypeScript: */
-    "moduleResolution": "bundler",
-    "module": "ESNext",
-    "outDir": "dist",
-    "sourceMap": true,
-    /* TSX specific config that helps maybe */
-    // "moduleResolution": "bundler",
-    // "module": "ESNext",
-    // "noEmit": true,
-    // maybe will help with debuggin
-    // "declarationMap": true
-    /* Make it so it is possible to import with absolute path (when refactoring in the future) */
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules/**/*"]
+  "exclude": ["node_modules"]
 }

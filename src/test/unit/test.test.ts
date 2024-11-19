@@ -1,15 +1,8 @@
-// import { App } from "app/app.js"
-import { App } from 'app/app.js'
-import anyTest, { type TestFn } from 'ava'
+import { test, expect } from "vitest";
+import { App } from "@/app/app";
 
-interface TestContext {
-  app: App
-}
-
-const test = anyTest as TestFn<TestContext>
-
-test('Cancels and recreates booking on date change', async (t) => {
-  const app = new App()
-  await app.start()
-  t.pass()
-})
+test("Cancels and recreates booking on date change", async () => {
+  const app = new App();
+  await app.start();
+  expect(app).toBeDefined();
+});

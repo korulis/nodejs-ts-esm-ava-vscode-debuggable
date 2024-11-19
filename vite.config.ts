@@ -1,21 +1,19 @@
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  root: process.cwd(),
-
+  plugins: [tsconfigPaths()],
   build: {
-    outDir: "dist",
-    target: "esnext",
     rollupOptions: {
       input: "src/app/index.ts",
     },
   },
-
-  plugins: [tsconfigPaths()],
-
   server: {
     port: 3000,
-    open: true,
+  },
+  test: {
+    globals: true,
+    environment: "node",
+    include: ["src/test/unit/**/*.test.ts"],
   },
 });

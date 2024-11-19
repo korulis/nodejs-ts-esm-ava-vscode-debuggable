@@ -2,7 +2,7 @@
   "type": "module",
   "name": "api-bridge-sem",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./src/app/index.ts",
   "repository": "git@github.com:Convious/api-bridge-sem.git",
   "author": "None",
   "license": "UNLICENSED",
@@ -10,19 +10,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js"
+    "test": "vitest"
   },
   "devDependencies": {
-    "@ava/typescript": "^5.0.0",
-    "@tsconfig/node22": "^22.0.0",
-    "@tsconfig/recommended": "^1.0.8",
     "@types/node": "^22.9.0",
-    "ava": "^6.2.0",
     "cross-env": "^7.0.3",
-    "tsx": "^4.19.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.6.3",
     "vite": "^5.4.11",
-    "vite-tsconfig-paths": "^5.1.2"
+    "vite-tsconfig-paths": "^5.1.2",
+    "vitest": "^2.1.5"
   },
   "dependencies": {}
 }
