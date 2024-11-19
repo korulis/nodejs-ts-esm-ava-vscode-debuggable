@@ -8,8 +8,6 @@
     /* What TS compilation should base its structure on: https://www.typescriptlang.org/tsconfig/#rootDir */
     "rootDir": "./src",
     /* COMPILE */
-    /* Make it so it is possible to import with absolute path (when refactoring in the future) */
-    "baseUrl": "./src",
     /* Base Options: */
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -48,11 +46,18 @@
     // "noEmit": true,
     // maybe will help with debuggin
     // "declarationMap": true
+  /* Make it so it is possible to import with absolute path (when refactoring in the future) */
+  "baseUrl": ".",
+  "paths": {
+    "*": [
+      "./src/*"
+    ]
+  }
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
     "node_modules/**/*"
-  ]
+  ],
 }
