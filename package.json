@@ -8,10 +8,9 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "rm -rf dist && NODE_ENV=development tsx watch ./src/app/index.ts",
-    "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js",
-    "build_and_start": "tsc && node dist/app/index.js",
-    "build": "tsc"
+    "dev": "vite",
+    "build": "vite build",
+    "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js"
   },
   "devDependencies": {
     "@ava/typescript": "^5.0.0",
@@ -21,8 +20,8 @@
     "ava": "^6.2.0",
     "cross-env": "^7.0.3",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
