@@ -3,15 +3,16 @@ export default {
   watchMode: {
     ignoredChanges: ['dist/**/*', 'tsconfig.tsbuildinfo']
   },
+  // extensions: {
+  //   ts: 'module',
+  // },
   typescript: {
-    // "extensions": [
-    //   "ts",
-    // ],
-    "rewritePaths": {
+    rewritePaths: {
       "src/": "dist/"
     },
     compile: "tsc",
   },
+  // require: ['./src/app/alias.ts'],
   timeout: '1m',
-  nodeArguments: ['--import=tsx'],
+  nodeArguments: ['--import=tsx', "--loader=./dist/app/alias.js"],
 }
