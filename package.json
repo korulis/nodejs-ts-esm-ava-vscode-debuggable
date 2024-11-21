@@ -8,8 +8,10 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
+    "prepare": "ts-patch install -s",
     "start": "rm -rf dist && NODE_ENV=development tsx watch ./src/app/index.ts",
     "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js",
+    "test_tspatch": "NODE_OPTIONS='--import=tsx' ava --config unittest_tspatch.js",
     "build_and_start_ema": "tsc && node --loader=./dist/app/alias.js ./dist/app/index.js",
     "build_and_start_tscp": "tsc && node -r tsconfig-paths/register ./dist/app/index.js",
     "build": "tsc"
@@ -21,9 +23,11 @@
     "@types/node": "^22.9.0",
     "ava": "^6.2.0",
     "cross-env": "^7.0.3",
+    "ts-patch": "^3.2.1",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.19.2",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "typescript-transform-paths": "^3.5.2"
   },
   "dependencies": {
     "esm-module-alias": "^2.2.1"
