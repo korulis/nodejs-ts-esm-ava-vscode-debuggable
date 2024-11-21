@@ -10,7 +10,7 @@
   "scripts": {
     "start": "rm -rf dist && NODE_ENV=development tsx watch ./src/app/index.ts",
     "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js",
-    "build_and_start": "tsc && node dist/app/index.js",
+    "build_and_start_ema": "tsc && node --loader=./dist/app/alias.js ./dist/app/index.js",
     "build": "tsc"
   },
   "devDependencies": {
@@ -24,5 +24,6 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "esm-module-alias": "^2.2.1"
   }
 }
