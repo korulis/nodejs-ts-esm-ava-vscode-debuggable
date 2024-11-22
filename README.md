@@ -1,4 +1,4 @@
-The goal is to find the cofiguration combination that allows to run Node.js Web app (koa.js based) with Typescript with ESM with TSX runner with AVA for testing and being able to debug both tests and the app with vscode.
+The goal is to find the cofiguration combination that allows to run Node.js Web app (koa.js based) with Typescript with ESM with TSX runner with AVA for testing and being able to debug both tests and run the app with vscode. Path aliases (imports with absolute paths) must work.
 
 Dependencies:
 > node22
