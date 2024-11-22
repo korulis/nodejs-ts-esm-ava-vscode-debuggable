@@ -10,11 +10,9 @@ Setup:
 
 
 TODO:
-check if can run tests localy
-check if controller code is debugged
-check if can debug test localy
-check if can run dist locally
-
-DONE check if can run localy
-DONE check if can debug localy
-DONE check if can build localy
+- check if can debug test localy
+- DONE check if can run tests localy
+- DONE check if can run dist locally
+- DONE check if can run localy
+- DONE check if can debug localy
+- DONE check if can build localy
