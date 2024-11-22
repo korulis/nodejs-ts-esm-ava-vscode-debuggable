@@ -1,9 +1,7 @@
 import { App2 } from '../../app/app2.js'
 import anyTest, { type TestFn } from 'ava'
 
-interface TestContext {
-  app: App2
-}
+interface TestContext { }
 
 const test = anyTest as TestFn<TestContext>
 

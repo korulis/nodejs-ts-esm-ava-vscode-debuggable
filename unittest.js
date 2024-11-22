@@ -14,5 +14,5 @@ export default {
   },
   // require: ['./src/app/alias.ts'],
   timeout: '1m',
-  nodeArguments: ['--import=tsx', "--loader=./dist/app/alias.js"],
+  nodeArguments: ['--import=tsx'],
 }
