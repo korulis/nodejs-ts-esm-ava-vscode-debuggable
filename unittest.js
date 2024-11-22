@@ -1,18 +1,8 @@
 export default {
-  files: ['src/test/unit/**/*.test.ts'],
+  files: ['dist/test/unit/**/*.test.js'],
   watchMode: {
     ignoredChanges: ['dist/**/*', 'tsconfig.tsbuildinfo']
   },
-  // extensions: {
-  //   ts: 'module',
-  // },
-  typescript: {
-    rewritePaths: {
-      "src/": "dist/"
-    },
-    compile: "tsc",
-  },
-  // require: ['./src/app/alias.ts'],
   timeout: '1m',
   nodeArguments: ['--import=tsx', "--loader=./dist/app/alias.js"],
 }
