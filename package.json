@@ -12,8 +12,7 @@
     "test": "NODE_OPTIONS='--import=tsx' ava --config unittest.js",
     "build_and_start_ema": "tsc && node --loader=./dist/app/alias.js ./dist/app/index.js",
     "build_and_start_tscp": "tsc && node -r tsconfig-paths/register ./dist/app/index.js",
-    "build": "tsc",
-    "clean": "rm -rf dist"
+    "build": "tsc"
   },
   "devDependencies": {
     "@ava/typescript": "^5.0.0",
